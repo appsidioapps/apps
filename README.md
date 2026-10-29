@@ -50,6 +50,10 @@ Icons are taken from each app's
 The script uses `ffmpeg` when available for small paletted icons and falls back
 to `System.Drawing` otherwise. Both paths preserve transparency.
 
+Keep `template.html` and `apps.json` UTF-8 encoded. The build script reads both
+as UTF-8 explicitly because Windows PowerShell 5.1 otherwise defaults to ANSI
+and can corrupt characters such as em dashes.
+
 ## Publish an update
 
 After changing `apps.json` and running the build script:
