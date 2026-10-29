@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>Apps by Appsidio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b5bdb'/%3E%3Cpath d='M20 46 32 18l12 28h-7l-2.4-6H29.4L27 46h-7Zm12-12h3l-1.5-4-1.5 4Z' fill='white'/%3E%3C/svg%3E">
+<!-- appsidio-apps-page:v1 -->
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    color-scheme: light;
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --text: #101114;
+    --muted: #5f6470;
+    --border: #e3e5ea;
+    --shadow: 0 1px 2px rgba(16, 17, 20, .04), 0 12px 32px rgba(16, 17, 20, .06);
+    --accent: #3b5bdb;
+    --accent-soft: #e8edff;
+    --button: #101114;
+    --button-text: #ffffff;
+    --tag-bg: #f0f1f4;
+    --tag-text: #4b5060;
+  }
+
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b0d10;
+    --surface: #15181d;
+    --text: #f4f5f7;
+    --muted: #a1a7b3;
+    --border: #262b33;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 18px 40px rgba(0, 0, 0, .35);
+    --accent: #8ea6ff;
+    --accent-soft: #1b2340;
+    --button: #f4f5f7;
+    --button-text: #101114;
+    --tag-bg: #1e232b;
+    --tag-text: #b7bec9;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0b0d10;
+      --surface: #15181d;
+      --text: #f4f5f7;
+      --muted: #a1a7b3;
+      --border: #262b33;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 18px 40px rgba(0, 0, 0, .35);
+      --accent: #8ea6ff;
+      --accent-soft: #1b2340;
+      --button: #f4f5f7;
+      --button-text: #101114;
+      --tag-bg: #1e232b;
+      --tag-text: #b7bec9;
+    }
+  }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 20px calc(40px + env(safe-area-inset-bottom));
+  }
+
+  .hero { max-width: 640px; margin-bottom: 36px; }
+
+  .brand {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .18em;
+  }
+
+  h1 {
+    margin: 18px 0 12px;
+    font-size: clamp(30px, 5vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+  }
+
+  .hero p {
+    margin: 0;
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .card-head { display: flex; align-items: flex-start; gap: 14px; }
+
+  .app-icon {
+    display: block;
+    flex: none;
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+  }
+
+  .app-copy { min-width: 0; }
+
+  .card h2 {
+    margin: 2px 0 5px;
+    font-size: 17px;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+  }
+
+  .card p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+  .card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .tag {
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .play {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: var(--button);
+    color: var(--button-text);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .play:active { transform: scale(.98); }
+  .play svg { width: 14px; height: 14px; }
+
+  footer {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .all-apps {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .all-apps svg { width: 15px; height: 15px; }
+
+  .copyright { margin: 0; color: var(--muted); font-size: 12.5px; }
+
+  @media (max-width: 360px) {
+    .page { padding-left: 14px; padding-right: 14px; }
+    .card-foot { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <span class="brand">APPSIDIO</span>
+    <h1>Apps that actually matter.</h1>
+    <p>No noise. Just quality. Useful apps for everyday life, built to respect your time and your data.</p>
+  </header>
+
+  <section class="grid" aria-label="Apps by Appsidio">
+{{CARDS}}
+  </section>
+
+  <footer>
+    <a class="all-apps" href="{{DEVELOPER_URL}}">
+      See all Appsidio apps on Google Play
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="copyright">&copy; {{YEAR}} Appsidio</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "developerUrl": "https://play.google.com/store/apps/dev?id=7910721838486365023",
+  "apps": [
+    {
+      "name": "BMI Calculator: Weight Tracker",
+      "package": "com.nexus.bmicalculator",
+      "tagline": "Track BMI, weight and your health goals.",
+      "category": "Health & Fitness",
+      "icon": "bmi_calculator/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Woosh: Water Sort",
+      "package": "com.woosh.watersort",
+      "tagline": "Relax with satisfying water-sort puzzles.",
+      "category": "Games",
+      "icon": "gameapp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Profit Margin Calculator",
+      "package": "com.profitmargincalculator.app",
+      "tagline": "Price with confidence and protect your margin.",
+      "category": "Business",
+      "icon": "profitmargincalculator/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Business Ideas: 1000+",
+      "package": "com.startupideas.app",
+      "tagline": "1,000+ startup ideas, ready when you are.",
+      "category": "Business",
+      "icon": "startupideas/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Money Diary: Expense Tracker",
+      "package": "com.moneydiary.app",
+      "tagline": "Track every penny, entirely offline.",
+      "category": "Finance",
+      "icon": "budgetapp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "ATS Resume Maker: CV Builder",
+      "package": "com.appsidio.resumii",
+      "tagline": "Build an ATS-friendly resume in minutes.",
+      "category": "Productivity",
+      "icon": "resume_ai/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Tic Tac Toe Prime: Cute XO",
+      "package": "com.appsidio.tictactoe_prime",
+      "tagline": "A cozy twist on the classic XO game.",
+      "category": "Games",
+      "icon": "tictactoe/tictactoe_neon/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Kuiiz: Quiz & Trivia Game",
+      "package": "com.appsidio.kuiiz",
+      "tagline": "Fast, fun trivia across 12 categories.",
+      "category": "Games",
+      "icon": "kuiiz/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Parallax: 4K & HD Wallpapers",
+      "package": "com.appsidio.parallax",
+      "tagline": "4K and HD wallpapers for every mood.",
+      "category": "Personalization",
+      "icon": "wallpaper_app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "name": "Mental Models: Brain Training",
+      "package": "com.appsidio.billionaireblueprint",
+      "tagline": "Think clearer with powerful mental models.",
+      "category": "Education",
+      "icon": "mental_model_game/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    }
+  ]
+}
