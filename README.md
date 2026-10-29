@@ -6,6 +6,9 @@ The public catalog page used by the **More from Appsidio** row in each app.
 
 `https://appsidioapps.github.io/apps/`
 
+**Status:** published. The repository is `appsidioapps/apps`, the default branch
+is `main`, and GitHub Pages is enabled with HTTPS.
+
 The apps fetch `https://appsidioapps.github.io/apps/index.html` and cache the
 result locally, so the page keeps working offline after the first successful
 load. Every app also ships a bundled copy in `assets/more_apps/index.html`.
@@ -47,7 +50,24 @@ Icons are taken from each app's
 The script uses `ffmpeg` when available for small paletted icons and falls back
 to `System.Drawing` otherwise. Both paths preserve transparency.
 
-## Publish on GitHub Pages (one time)
+## Publish an update
+
+After changing `apps.json` and running the build script:
+
+```powershell
+cd more-apps-site
+git add .
+git commit -m "Update app catalog"
+git push
+```
+
+GitHub Pages redeploys automatically. The apps pick up the new page on their
+next open; app rebuilds are only needed to refresh the bundled offline fallback.
+
+## First-time GitHub Pages setup (already done)
+
+The steps below document how this repository was created, in case it ever needs
+to be re-created.
 
 1. Create a public GitHub repository named `apps` under the `appsidioapps`
    account.
